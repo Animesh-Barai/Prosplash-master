@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- normal -->
+    <item tools:ignore="StateListReachable">
+        <shape>
+            <gradient android:endColor="#92EFFD" android:startColor="#4E65FF" android:angle="360" />
+            <corners android:radius="25dp" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+
+    <!-- pressed -->
+    <item android:state_pressed="true">
+        <shape>
+
+            <gradient android:endColor="#E2D1C3" android:startColor="#FDFCFB" />
+            <corners android:radius="5dp" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+
+    <!-- focused -->
+    <item android:state_focused="true">
+        <shape>
+            <gradient android:endColor="#A890FE" android:startColor="#EA8D8D" />
+            <corners android:radius="5dp" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+
+</selector>

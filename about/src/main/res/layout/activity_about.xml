@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_about_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aork.common.ui.widget.swipeBackView.SwipeBackCoordinatorLayout
+        android:id="@+id/activity_about_swipeBackView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/root_color">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_about_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:clipToPadding="false" />
+
+    </com.aork.common.ui.widget.swipeBackView.SwipeBackCoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

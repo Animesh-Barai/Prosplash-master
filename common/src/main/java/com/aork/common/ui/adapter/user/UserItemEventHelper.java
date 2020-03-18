@@ -1,0 +1,32 @@
+package com.aork.common.ui.adapter.user;
+
+import android.text.TextUtils;
+import android.view.View;
+
+import com.aork.common.base.activity.MysplashActivity;
+import com.aork.base.pager.ProfilePager;
+import com.aork.base.unsplash.User;
+import com.aork.common.utils.helper.RoutingHelper;
+import com.aork.component.ComponentFactory;
+
+public class UserItemEventHelper implements UserAdapter.ItemEventCallback {
+
+    private MysplashActivity activity;
+
+    public UserItemEventHelper(MysplashActivity activity) {
+        this.activity = activity;
+    }
+
+    @Override
+    public void onStartUserActivity(View avatar, View background, User user, int index) {
+        ComponentFactory.getUserModule()
+                .startUserActivity(activity, avatar, background, user, ProfilePager.PAGE_PHOTO);
+    }
+
+    @Override
+    public void onPortfolioButtonClicked(User user) {
+        if (!TextUtils.isEmpty(user.portfolio_url)) {
+            RoutingHelper.startWebActivity(activity, user.portfolio_url);
+        }
+    }
+}

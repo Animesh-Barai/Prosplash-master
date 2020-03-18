@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aork.common.ui.widget.swipeBackView.SwipeBackCoordinatorLayout
+        android:id="@+id/activity_login_swipeBackView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/root_color"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/activity_login_closeBtn"
+                    style="@style/material_image_button"
+                    android:src="@drawable/ic_close"
+                    tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/activity_login_icon"
+                        android:layout_width="@dimen/design_icon_size"
+                        android:layout_height="@dimen/design_icon_size"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/activity_login_title"
+                        style="@style/title_text"
+                        android:layout_below="@id/activity_login_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/mini_icon_size"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:layout_marginEnd="@dimen/mini_icon_size"
+                        android:layout_marginBottom="@dimen/mini_margin"
+                        android:text="LOGIN"
+                        android:textSize="@dimen/design_title_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/activity_login_content"
+                        style="@style/content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/activity_login_title"
+                        android:layout_centerHorizontal="true"
+                        android:text="Welcome back."
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_login_buttonContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_login_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/activity_login_loginBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/design_icon_size"
+                            android:layout_marginTop="300dp"
+                            android:layout_marginEnd="@dimen/design_icon_size"
+                            android:layout_marginBottom="@dimen/normal_margin"
+                            android:fontFamily="@font/montserratalternates_bold"
+                            android:text="LOGIN"
+                            android:textColor="?attr/root_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/activity_login_joinBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/design_icon_size"
+                            android:layout_marginEnd="@dimen/design_icon_size"
+                            android:layout_marginBottom="@dimen/design_icon_size"
+                            android:fontFamily="@font/montserratalternates_bold"
+                            android:text="JOIN"
+                            android:textColor="?attr/content_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/activity_login_progressContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_login_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/design_icon_size">
+
+                        <com.github.rahatarmanahmed.cpv.CircularProgressView
+                            android:layout_width="@dimen/circular_progress_height"
+                            android:layout_height="@dimen/circular_progress_height"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/little_icon_size"
+                            app:cpv_animAutostart="true"
+                            app:cpv_color="?attr/title_color"
+                            app:cpv_indeterminate="true" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.aork.common.ui.widget.swipeBackView.SwipeBackCoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

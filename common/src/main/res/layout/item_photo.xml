@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aork.common.ui.widget.longPressDrag.LongPressDragCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_photo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@animator/touch_rise_avatar"
+    app:cardBackgroundColor="?attr/root_color"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="7dp"
+    app:cardPreventCornerOverlap="false"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.aork.common.ui.widget.CoverImageView
+            android:id="@+id/item_photo_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:civ_shadow_position="bottom"
+            tools:background="@color/colorPrimary_dark" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/item_photo_deleteButton"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/little_margin"
+            android:layout_marginEnd="@dimen/little_margin"
+            android:background="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/little_margin"
+            android:src="@drawable/ic_item_close"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_photo_image">
+
+            <com.aork.common.ui.widget.CircularProgressIcon
+                android:id="@+id/item_photo_likeButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/little_margin"
+                android:layout_marginEnd="@dimen/little_margin"
+                android:layout_marginBottom="@dimen/little_margin"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/item_photo_collectionButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/little_margin"
+                android:layout_marginEnd="@dimen/little_margin"
+                android:layout_marginBottom="@dimen/little_margin"
+                android:layout_toStartOf="@id/item_photo_likeButton"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/little_margin"
+                android:src="@drawable/ic_item_collected"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <com.aork.common.ui.widget.CircularProgressIcon
+                android:id="@+id/item_photo_downloadButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/little_margin"
+                android:layout_marginEnd="@dimen/little_margin"
+                android:layout_marginBottom="@dimen/little_margin"
+                android:layout_toStartOf="@id/item_photo_collectionButton"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <com.aork.common.ui.widget.CircularImageView
+                android:id="@+id/item_photo_avatar"
+                android:layout_width="@dimen/mini_icon_size"
+                android:layout_height="@dimen/mini_icon_size"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/little_margin"
+                android:layout_marginEnd="@dimen/little_margin"
+                android:layout_marginBottom="@dimen/little_margin"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@animator/touch_rise_avatar"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                tools:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/item_photo_title"
+                style="@style/title_text"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/little_margin"
+                android:layout_marginBottom="@dimen/little_margin"
+                android:layout_toStartOf="@id/item_photo_downloadButton"
+                android:layout_toEndOf="@id/item_photo_avatar"
+                android:maxLines="1"
+                android:shadowColor="@color/colorTextDark2nd"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="@color/colorTextLight"
+                android:textSize="@dimen/subtitle_text_size"
+                tools:ignore="RtlHardcoded"
+                tools:text="Alfredo Wong, 2016-7-21" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.aork.common.ui.widget.longPressDrag.LongPressDragCardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_swipe_back_background_container"
+    android:background="?attr/root_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aork.common.ui.widget.insets.StatusBarView
+        android:id="@+id/container_swipe_back_background_statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="@string/feedback_drag_to_back"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/container_swipe_back_background_statusBar"
+        android:layout_margin="@dimen/normal_margin"
+        android:textColor="?attr/colorAccent"
+        style="@style/title_text" />
+
+    <com.aork.common.ui.widget.insets.NavigationBarView
+        android:id="@+id/container_swipe_back_background_navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:text="@string/feedback_drag_to_back"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/container_swipe_back_background_navigationBar"
+        android:layout_margin="@dimen/normal_margin"
+        android:textColor="?attr/colorAccent"
+        style="@style/title_text" />
+
+</RelativeLayout>

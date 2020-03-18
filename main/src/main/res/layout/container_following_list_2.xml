@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aork.common.ui.widget.insets.FitBottomSystemBarBothWaySwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_following_list_swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/root_color">
+
+    <com.aork.common.ui.widget.MultipleStateRecyclerView
+        android:id="@+id/container_following_list_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+</com.aork.common.ui.widget.insets.FitBottomSystemBarBothWaySwipeRefreshLayout>
